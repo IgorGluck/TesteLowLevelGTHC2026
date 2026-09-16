@@ -11,7 +11,7 @@
 
 
                             
-                                
+                                int j;
                                 int i;
 
 
@@ -44,12 +44,23 @@
 
 
                                 // loop e condicional para comparar a entrada com o buffer
-                                while (argv[1] != buffer[i]) {
-                                    i++;
-                                    if (argv[1] == buffer[i]) {
-                                        printf("Match found: %s\n", argv[1]);
+
+                                while (buffer[i] != '\0') {
+
+                                    j = 0;
+                                    if (buffer[i] == argv[1][j]) {
+
+                                     while ( argv[1][j] != '\0' &&  buffer[i + j] == argv[1][j]) {
+                                     j++;
+                                     }
+
+                                      if (argv[1][j] == '\0') {
+                                        printf("%s\n", buffer);
                                         break;
-                                    }   
+                                      }
+                                    
+                                    }
+                                 i++;
                                 }
 
 
