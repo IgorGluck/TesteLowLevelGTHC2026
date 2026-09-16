@@ -7,7 +7,7 @@
 
                         int main(int argc, char **argv      ){
 
-                            // filename 
+                           
 
 
                             int total_read_bytes =  0;
@@ -52,22 +52,6 @@
                             if (bytes_read == -1)
                                 printf("error read file ");
                         
-
-
-                            
-
-                            // write    (STDOUT_FILENO = retorna no terminal)   
-
-
-                            // ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-
-                            // error write
-                            
-                            // if (bytes_written == -1)
-                                // printf("error write file ");
-
-
-                    
 
                             // close
 
