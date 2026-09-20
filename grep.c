@@ -15,14 +15,15 @@
                                 int i;
 
 
-                                for(i = 1 ; i < argc ; i ++){
+                                for(i = 2 ; i < argc ; i ++){
+
                                 
                                 
                                 // open
 
                                 int fd;     
 
-                                fd = open(argv[i] , O_RDONLY );
+                                fd = open(argv[i] , O_RDONLY );     
 
                                 // error open
 
