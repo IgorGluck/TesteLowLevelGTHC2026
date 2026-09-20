@@ -10,7 +10,9 @@
                                 
 
 
-                            
+                                
+                                
+                                int k;
                                 int j;
                                 int i;
 
@@ -46,22 +48,22 @@
 
                                 // loop e condicional para comparar a entrada com o buffer
 
-                                while (buffer[i] != '\0') {
+                                while (k < bytes_read) {
 
                                     j = 0;
-                                    if (buffer[i] == argv[1][j]) {
+                                    if (buffer[k] == argv[1][j]) {
 
-                                     while ( argv[1][j] != '\0' &&  buffer[i + j] == argv[1][j]) {
+                                     while (argv[1][j] != '\0' && k + j < bytes_read && buffer[k + j] == argv[1][j]) {
                                      j++;
                                      }
 
                                       if (argv[1][j] == '\0') {
-                                        printf("%s\n", buffer);
+                                        printf("Match found: %s\n", argv[1]);
                                         break;
                                       }
                                     
                                     }
-                                 i++;
+                                 k++;
                                 }
 
 
@@ -91,12 +93,12 @@
                                 // write    (STDOUT_FILENO = retorna no terminal)   
 
 
-                                ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+                                // ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 
                                 // error write
                                 
-                                if (bytes_written == -1)
-                                    printf("error write file ");
+                                //if (bytes_written == -1)
+                                      //printf("error write file ");
 
 
                         
@@ -129,4 +131,4 @@
 
 
 
-                            }
+                            }    
