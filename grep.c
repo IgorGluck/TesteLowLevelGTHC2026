@@ -12,8 +12,8 @@
 
                                 
                                 
-                                int k;
-                                int j;
+                                int k = 0;
+                                int j = 0;
                                 int i;
 
 
